@@ -12,19 +12,16 @@ You're part of a dynamic team at a company specializing in NLP services, dedicat
 
 ### Overview
 
-In this challenge, you are entrusted with the development of a sophisticated pipeline capable of processing and summarizing text data efficiently. The ultimate goal is to not only produce concise summaries of news articles in real-time but also to enhance this data in ways that bolster machine learning (ML) training scenarios. This includes considering how the summarized data is stored, ensuring that it supports efficient data access patterns suitable for large-scale processing and ML model training.
+In this challenge, you are entrusted with the development of a pipeline capable of processing text data efficiently. The ultimate goal is to enhance this data in ways that bolster machine learning (ML) training scenarios. This includes considering how the result is stored, ensuring that it supports efficient data access patterns suitable for large-scale processing and ML model training, in offline batch processing context.
 
 To kickstart your task, you are provided with a sample dataset alongside a foundational setup designed to simulate the ingestion of streaming text data. Your challenge is to extend and optimize this setup in a way explained below.
 
 ---
 
-### **Option 1: Text Transformation**
+### Text Transformation
 
 Implement a pipeline that adds a calculated feature to each text record, such as word count. 
 
-### **Option 2: Text Summarization with Hugging Face**
-
-For this task, select any suitable model from Hugging Face's Transformers library to summarize the articles. Your goal is to condense the text data, preparing it for uses such as summarization-based model training or feature reduction. The choice of model should be justified based on its performance and relevance to the summarization task at hand.
 
 ## **Getting Started**
 
@@ -39,8 +36,7 @@ For this task, select any suitable model from Hugging Face's Transformers librar
 
 ## **Requirements**
 
-- The system should be architected to handle the processing of millions of records efficiently.
-- While not mandatory, you are encouraged to use an offline, enterprise-scale data processing solution such as Apache Spark, Metaflow, or any other tool suitable for distributed processing of large datasets. These tools can significantly enhance your pipeline's ability to handle millions of records efficiently and are highly recommended for candidates familiar with these technologies.
+- While not mandatory, you are encouraged to use an offline, enterprise-scale data processing solution such as Metaflow, MLFlow, Apache Flink or any other tool suitable for distributed processing of large datasets. These tools can significantly enhance your pipeline's ability to handle millions of records efficiently and are highly recommended for candidates familiar with these technologies. It's essential that the tool you choose can be run within a Docker container as part of the docker-compose environment locally.
 - **Optimization for ML Training**: Architect your solution with a focus on machine learning training scenarios. This includes considerations on how data is batched, stored, and retrieved, ensuring optimized access patterns for large-scale machine learning model training.
 - **Scalability**: Your system should be designed to process millions of text records efficiently, demonstrating a clear understanding of scalability principles and distributed processing techniques.
 - **Documentation**: Provide comprehensive documentation on how to set up and run your solution, including any dependencies and environment setup. Clearly outline your design decisions, especially those related to the choice of data processing tools and storage schema optimizations for ML training.
