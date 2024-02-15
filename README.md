@@ -1,18 +1,19 @@
-# Data Engineer Take-Home Challenge: Mini Pipeline for Text Summarization
+# Data Engineer Take-Home Challenge: Mini ETL Pipeline for a Text Summarization Model
 
 ### Objective
 
-Develop a data processing pipeline that ingests large volumes of text data and produces concise summaries. The pipeline should leverage Python and be designed with enterprise-scale data processing tools in mind.
+Develop a data processing pipeline that tranforms a large volume of text data from a Kinesis stream into a format suitable for the continuous training a text summarization model. The pipeline should leverage Python and be designed with enterprise-scale data processing tools in mind.
 
 ---
 
 ### Background
 
-You're part of a dynamic team at a company specializing in NLP services, dedicated to assisting news aggregators and content curators. The company's mission is to automate the summarization of articles and reports from diverse sources, enabling rapid access to distilled insights. This task is crucial for staying ahead in the fast-paced world of news and content curation, where the ability to quickly summarize and understand large volumes of text data can provide a significant competitive edge.
+You're part of a dynamic team at a company specializing in NLP services dedicated to assisting news aggregators and content curators. The company's mission is to automate the summarization of articles and reports from diverse sources, enabling rapid access to distilled insights. This task is crucial for staying ahead in the fast-paced world of news and content curation, where the ability to quickly summarize and understand large volumes of text data can provide a significant competitive edge. 
+
 
 ### Overview
 
-In this challenge, you are entrusted with the development of a pipeline capable of processing text data efficiently. The ultimate goal is to enhance this data in ways that bolster machine learning (ML) training scenarios. This includes considering how the result is stored, ensuring that it supports efficient data access patterns suitable for large-scale processing and ML model training, in offline batch processing context.
+The text summarization model must be trained on a regular schedule to keep up-to-date on the stylistic elements of modern journalism. Therefore in this challenge, you are entrusted with the development of a data pipeline capable of processing text data efficiently. The ultimate goal is to enhance this data in ways that bolster machine learning (ML) training scenarios. This includes considering how the result is stored, ensuring that it supports efficient data access patterns suitable for large-scale processing and ML model training.
 
 To kickstart your task, you are provided with a sample dataset alongside a foundational setup designed to simulate the ingestion of streaming text data. Your challenge is to extend and optimize this setup in a way explained below.
 
@@ -36,7 +37,8 @@ Implement a pipeline that adds a calculated feature to each text record, such as
 
 ## **Requirements**
 
-- While not mandatory, you are encouraged to use an offline, enterprise-scale data processing solution such as Metaflow, MLFlow, Apache Flink or any other tool suitable for distributed processing of large datasets. These tools can significantly enhance your pipeline's ability to handle millions of records efficiently and are highly recommended for candidates familiar with these technologies. It's essential that the tool you choose can be run within a Docker container as part of the docker-compose environment locally.
+- While not mandatory, you are encouraged to use an enterprise-scale data processing solution such as Metaflow, MLFlow, Spark, Apache Flink, or any other tool suitable for distributed processing of large datasets. These tools can significantly enhance your pipeline's ability to handle millions of records efficiently and are highly recommended for candidates familiar with these technologies. You may settle on a tool that's geared towards real-time or offline batch ETL. Either way, be prepared to justify your choice.
+- It's essential that any additional dependencies you add to the project can be run within a Docker container as part of the docker-compose environment, locally. If you chose a data processing tool that requires additional infrastructure, once again, make sure to add the additional components needed to the docker-compose environment. 
 - **Optimization for ML Training**: Architect your solution with a focus on machine learning training scenarios. This includes considerations on how data is batched, stored, and retrieved, ensuring optimized access patterns for large-scale machine learning model training.
 - **Scalability**: Your system should be designed to process millions of text records efficiently, demonstrating a clear understanding of scalability principles and distributed processing techniques.
 - **Documentation**: Provide comprehensive documentation on how to set up and run your solution, including any dependencies and environment setup. Clearly outline your design decisions, especially those related to the choice of data processing tools and storage schema optimizations for ML training.
