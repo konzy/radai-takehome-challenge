@@ -1,4 +1,4 @@
-# Data Engineer Take-Home Challenge: Mini ETL Pipeline for a Text Summarization Model
+# Data Engineer Take-Home Challenge: Mini ETL Pipeline.
 
 ### Objective
 
