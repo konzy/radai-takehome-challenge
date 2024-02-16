@@ -42,3 +42,7 @@ Implement a pipeline that adds a calculated feature to each text record, such as
 - **Optimization for ML Training**: Architect your solution with a focus on machine learning training scenarios. This includes considerations on how data is batched, stored, and retrieved, ensuring optimized access patterns for large-scale ML model training.
 - **Scalability**: Your system should be designed to process millions of text records efficiently, demonstrating a clear understanding of scalability principles and distributed processing techniques.
 - **Documentation**: Provide comprehensive documentation on how to set up and run your solution, including any dependencies and environment setup. Clearly outline your design decisions, especially those related to the choice of data processing tools and storage schema optimizations for ML training.
+
+  ## Submission Instructions
+
+Create a repository for your project and include a README with setup instructions, a description of your approach, and any necessary documentation to understand and run your pipeline. Provide a link to this repository in your submission.
