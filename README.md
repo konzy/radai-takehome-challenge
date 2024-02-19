@@ -21,7 +21,7 @@ To kickstart your task, you are provided with a sample dataset alongside a found
 
 ### Text Transformation
 
-Implement a pipeline that adds a calculated feature to each text record, such as word count. 
+Implement a pipeline that adds a calculated feature to each text record, such as word count and calculate the average for that metric across all records.
 
 
 ## **Getting Started**
