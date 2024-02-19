@@ -45,4 +45,4 @@ Implement a pipeline that adds a calculated feature to each text record, such as
 
   ## Submission Instructions
 
-Create a repository for your project and include a README with setup instructions, a description of your approach, and any necessary documentation to understand and run your pipeline. Provide a link to this repository in your submission.
+Clone this repository to download the boiler plate. Build your application around it, and extend README accordingly. Submit your response as a public Github repository or send the package over e-mail.
