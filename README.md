@@ -41,6 +41,6 @@ We understand that real-world data engineering projects often require dealing wi
 - Design your solution to facilitate machine learning training, focusing on data batching, storage, and retrieval for optimized access in large-scale ML model training.
 - Provide documentation on how to set up and run your solution. Outline your design decisions, especially those related to the choice of data processing tools and storage for ML training.
 
-  ## Submission Instructions
+## Submission Instructions
 
 Clone this repository to download the boiler plate. Build your application based on this foundation and update the README accordingly. Submit your completed challenge as a public GitHub repository or via emai.
