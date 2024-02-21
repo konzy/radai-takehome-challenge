@@ -67,8 +67,15 @@ if __name__ == '__main__':
     bucket_name = 'my-bucket'
     stream_name = 'MyStream'
 
-    dataset_size_mb = int(os.getenv('DATASET_SIZE_MB', '1'))  # Default to 1 MB if not specified
+    dataset_size_mb = int(os.getenv('DATASET_SIZE_MB', '1'))
+    num_iterations = int(os.getenv('NUM_ITERATIONS', '10')) 
+
 
     create_s3_bucket(bucket_name)
     create_kinesis_stream(stream_name)
-    publish_articles_to_kinesis(stream_name, dataset_size_mb)
+
+    for iteration in range(num_iterations):
+        print(f"Iteration {iteration + 1}...")
+        publish_articles_to_kinesis(stream_name, dataset_size_mb)
+        if iteration < 99: 
+            time.sleep(60) 

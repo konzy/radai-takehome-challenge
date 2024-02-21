@@ -19,6 +19,7 @@ services:
       - AWS_ACCESS_KEY_ID=test
       - AWS_SECRET_ACCESS_KEY=test
       - AWS_DEFAULT_REGION=us-east-1
+      - NUM_ITERATIONS=10
       # Adjust DATASET_SIZE_MB as needed for scalability testing.
       - DATASET_SIZE_MB=1
     depends_on:
