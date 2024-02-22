@@ -43,4 +43,4 @@ We understand that real-world data engineering projects often require dealing wi
 
 ## Submission Instructions
 
-Clone this repository to download the boiler plate. Build your application based on this foundation and update the README accordingly. Submit your completed challenge as a public GitHub repository or via emai.
+Clone this repository to download the boiler plate. Build your application based on this foundation and update the README accordingly. Submit your completed challenge via email.
