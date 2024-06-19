@@ -56,6 +56,8 @@ services:
       - AWS_DEFAULT_REGION=us-east-1
     depends_on:
       - localstack
+    entrypoint: [ "bash", "-c", "python /opt/flink/pyflink/jobs/flink_app.py" ]
+
 
   flink-taskmanager:
     volumes:
