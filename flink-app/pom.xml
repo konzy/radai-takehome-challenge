@@ -1,0 +1,60 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.brian.app</groupId>
+    <artifactId>my-app</artifactId>
+    <version>1</version>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-connector-kinesis -->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.flink</groupId>-->
+<!--            <artifactId>flink-connector-kinesis</artifactId>-->
+<!--            <version>4.3.0-1.18</version>-->
+<!--        </dependency>-->
+
+<!--        Kinesis Source-->
+        <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-sql-connector-kinesis -->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-sql-connector-kinesis</artifactId>
+            <version>4.3.0-1.18</version>
+        </dependency>
+
+<!--        Kinesis sink-->
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.flink/flink-connector-aws-kinesis-streams &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.flink</groupId>-->
+<!--            <artifactId>flink-connector-aws-kinesis-streams</artifactId>-->
+<!--            <version>4.3.0-1.18</version>-->
+<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-streaming-java -->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-streaming-java</artifactId>
+            <version>1.18.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-core -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-core</artifactId>
+            <version>1.12.739</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-kinesis -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-kinesis</artifactId>
+            <version>1.12.739</version>
+        </dependency>
+
+
+<!--        <dependency>-->
+<!--          <groupId>com.sun.xml.bind</groupId>-->
+<!--          <artifactId>jaxb-core</artifactId>-->
+<!--        </dependency>-->
+
+    </dependencies>
+</project>
+

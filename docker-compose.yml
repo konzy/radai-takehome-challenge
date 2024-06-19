@@ -1,9 +1,12 @@
-version: '3.8'
 services:
   localstack:
     image: localstack/localstack:1.2.0
     ports:
       - "4566:4566"
+      - "4565:4565"
+      - "8055:8055"
+      - "4572:4572"
+      - "127.0.0.1:4510-4559:4510-4559"
     environment:
       - SERVICES=kinesis,s3
       - DEFAULT_REGION=us-east-1
@@ -20,7 +23,53 @@ services:
       - AWS_SECRET_ACCESS_KEY=test
       - AWS_DEFAULT_REGION=us-east-1
       - NUM_ITERATIONS=10
-      # Adjust DATASET_SIZE_MB as needed for scalability testing.
       - DATASET_SIZE_MB=1
     depends_on:
       - localstack
+
+#  article-processor:
+#    build: ./populate-script
+#    volumes:
+#      - ./populate-script:/app
+#    environment:
+#      - AWS_ACCESS_KEY_ID=test
+#      - AWS_SECRET_ACCESS_KEY=test
+#      - AWS_DEFAULT_REGION=us-east-1
+#      - NUM_ITERATIONS=10
+#      - DATASET_SIZE_MB=1
+#    depends_on:
+#      - localstack
+
+  flink-jobmanager:
+    image: briank/pyflink:1.18
+    command: jobmanager
+    ports:
+      - "8081:8081"
+      - "6123:6123"
+    volumes:
+      - ./flink-app/flink-jobs:/opt/flink/pyflink/jobs
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+      - HIGH_AVAILABILITY=NONE
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1
+    depends_on:
+      - localstack
+
+  flink-taskmanager:
+    volumes:
+      - ./flink-app/flink-jobs:/opt/flink/pyflink/jobs
+    image: briank/pyflink:1.18
+    command: taskmanager
+    depends_on:
+      - localstack
+      - flink-jobmanager
+    links:
+      - flink-jobmanager
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+      - HIGH_AVAILABILITY=NONE
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1

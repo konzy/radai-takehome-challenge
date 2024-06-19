@@ -1,0 +1,14 @@
+<configuration>
+    <property>
+        <name>fs.AbstractFileSystem.hadoop</name>
+        <value>com.amazonaws.services.s3.AmazonS3Control</value>
+    </property>
+    <property>
+        <name>fs.s3a.impl</name>
+        <value>org.apache.hadoop.fs.s3a.S3AFileSystem</value>
+    </property>
+    <property>
+        <name>s3a.endpoint</name>
+        <value>s3.amazonaws.com</value>
+    </property>
+</configuration>
